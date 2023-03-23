@@ -1,0 +1,7 @@
+[    1.060670] sd 0:0:0:0: [sda] 536870912 512-byte logical blocks: (275 GB/256 GiB)
+[    1.060672] sd 0:0:0:0: [sda] 4096-byte physical blocks
+[    1.060769] sd 0:0:0:0: [sda] Write Protect is off
+[    1.060770] sd 0:0:0:0: [sda] Mode Sense: 0f 00 00 00
+[    1.060930] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.416189] EXT4-fs (sda): mounted filesystem with ordered data mode. Opts: discard,errors=remount-ro,data=ordered
+[    1.452377] sd 0:0:0:0: [sda] Attached SCSI disk

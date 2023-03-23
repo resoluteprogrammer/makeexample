@@ -1,0 +1,26 @@
+
+BUILD_DIRECTORY = build
+OUTPUT_FILE := $(BUILD_DIRECTORY)/result
+FIRST_OUTPUT := $(BUILD_DIRECTORY)/first
+NEW_OUTPUT := $(BUILD_DIRECTORY)/new
+INPUT_FILES := data1 data2
+
+
+.PHONY: all clean
+
+all: $(BUILD_DIRECTORY) $(OUTPUT_FILE) $(FIRST_OUTPUT) $(NEW_OUTPUT)
+
+$(BUILD_DIRECTORY):
+	mkdir $(BUILD_DIRECTORY)
+
+$(OUTPUT_FILE): $(INPUT_FILES)
+	cat $^ > $@
+
+$(FIRST_OUTPUT): $(INPUT_FILES)
+	cat $< > $@
+
+$(NEW_OUTPUT): $(INPUT_FILES)
+	cat $? > $@
+
+clean:
+	rm -rf $(BUILD_DIRECTORY)
